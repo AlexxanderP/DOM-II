@@ -84,3 +84,15 @@ const destination = document.querySelector(".content-destination  h2");
 destination.addEventListener("dblclick", (e) => {
     e.target.style.cssText = "font-size : 8rem";
 }); 
+
+
+//add spin animation to destination Img
+const destinationImg = document.querySelector(".content-destination img")
+window.addEventListener("scroll", function(e) {
+    TweenMax.to(destinationImg, 3, {
+        rotationY: 900
+    });
+});
+
+
+
