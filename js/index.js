@@ -1,5 +1,5 @@
-///	* [ ] `mouseover`
-//  * [ ] `keydown`
+///	* [X] `mouseover`
+//  * [X] `keydown`
 //	* [ ] `wheel`
 //	* [ ] `drag / drop`
 //  * [ ] `load`
@@ -27,3 +27,15 @@ nav.forEach((currentvalue) => {
         TweenMax.to(e.target, 1, {x: 100, y: -25, rotation:1000, yoyo: true, repeat: 1});
     });
 });
+
+// keydown --- unique event
+let pageTitle = document.querySelector('.logo-heading');
+document.addEventListener('keydown', function (event) {
+  let keyName = event.key
+  pageTitle.textContent = `key pressed: ${keyName}`
+})
+
+// load --- unique event
+window.addEventListener('load', function (event) {
+    alert("Welcome to the Fun Bus! Woho!")
+})
